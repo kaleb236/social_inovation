@@ -13,8 +13,17 @@ class ui_windows(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.create_event('NX34RTY', '12:00')
-        self.create_event('NX34RTY', '14:00')
+        self.create_event('NX54RTB', '14:00')
+        self.ui.home_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        self.ui.patients_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
+        self.add_combo()
         self.create_video()
+    
+    def add_combo(self):
+        self.ui.task_comb.addItems(["ilaç", "asistan"])
+        self.ui.morning.addItems(['seç','7:00', '8:00'])
+        self.ui.after_noon.addItems(['seç','12:00', '12:30'])
+        self.ui.evening.addItems(['seç','19:00', '19:30'])
     
     def create_event(self, name, time):
         frame = QFrame()

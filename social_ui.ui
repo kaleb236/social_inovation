@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
+    <width>1298</width>
     <height>720</height>
    </rect>
   </property>
@@ -15,7 +15,19 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QFrame#left_frame,#right_frame, #central_frame{
-background-color: white;
+	background-color: rgba(250, 226, 222,200);
+}
+QWidget#centralwidget{
+	image: url(:/resource/images/background.jpg);
+}
+QLineEdit{
+	background-color:rgb(248, 248, 253);
+font: 75 12pt &quot;Century Gothic&quot;;
+border: 1px solid rgb(248, 248, 253);
+border-radius: 10px;
+}
+QComboBox{
+font: 75 12pt &quot;Century Gothic&quot;;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -48,6 +60,9 @@ background-color: white;
         <width>200</width>
         <height>16777215</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -124,7 +139,7 @@ background-color: white;
            <number>0</number>
           </property>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="home_btn">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -146,7 +161,7 @@ background-color: white;
             <property name="styleSheet">
              <string notr="true">QPushButton{
 font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid white;
+border: 0px solid white;
 border-radius: 10px;
 }
 QPushButton:hover{
@@ -175,7 +190,7 @@ background-color: #f2e8e4;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="patients_btn">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -203,7 +218,7 @@ background-color: #f2e8e4;
             <property name="styleSheet">
              <string notr="true">QPushButton{
 font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid white;
+border: 0px solid white;
 border-radius: 10px;
 }
 QPushButton:hover{
@@ -232,7 +247,7 @@ background-color: #f2e8e4;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="history_btn">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -260,7 +275,7 @@ background-color: #f2e8e4;
             <property name="styleSheet">
              <string notr="true">QPushButton{
 font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid white;
+border: 0px solid white;
 border-radius: 10px;
 }
 QPushButton:hover{
@@ -289,7 +304,7 @@ background-color: #f2e8e4;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="settings_btn">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -317,7 +332,7 @@ background-color: #f2e8e4;
             <property name="styleSheet">
              <string notr="true">QPushButton{
 font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid white;
+border: 0px solid white;
 border-radius: 10px;
 }
 QPushButton:hover{
@@ -523,7 +538,7 @@ background-color: #f2e8e4;
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">image: url(:/resource/images/register_doctor.png);</string>
+                 <string notr="true">image: url(:/resource/images/rob.png);</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -615,9 +630,7 @@ font: 75 11pt &quot;Century Gothic&quot;;
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid black;
-border-radius: 10px;</string>
+                    <string notr="true"/>
                    </property>
                   </widget>
                  </item>
@@ -643,9 +656,7 @@ border-radius: 10px;</string>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid black;
-border-radius: 10px;</string>
+                    <string notr="true"/>
                    </property>
                   </widget>
                  </item>
@@ -671,9 +682,7 @@ border-radius: 10px;</string>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid black;
-border-radius: 10px;</string>
+                    <string notr="true"/>
                    </property>
                   </widget>
                  </item>
@@ -699,9 +708,7 @@ border-radius: 10px;</string>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid black;
-border-radius: 10px;</string>
+                    <string notr="true"/>
                    </property>
                   </widget>
                  </item>
@@ -727,9 +734,7 @@ border-radius: 10px;</string>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid black;
-border-radius: 10px;</string>
+                    <string notr="true"/>
                    </property>
                   </widget>
                  </item>
@@ -747,7 +752,7 @@ border-radius: 10px;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="comboBox">
+                  <widget class="QComboBox" name="task_comb">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -800,7 +805,7 @@ border-radius: 10px;</string>
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QComboBox" name="comboBox_2">
+                     <widget class="QComboBox" name="morning">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -810,7 +815,7 @@ border-radius: 10px;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox_3">
+                     <widget class="QComboBox" name="after_noon">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -820,7 +825,7 @@ border-radius: 10px;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="comboBox_4">
+                     <widget class="QComboBox" name="evening">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -1098,7 +1103,7 @@ color: rgb(0, 209, 0);</string>
                 <string notr="true">font: 75 14pt &quot;Bahnschrift&quot;;</string>
                </property>
                <property name="text">
-                <string>Next events</string>
+                <string>Bir sonraki</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1110,13 +1115,13 @@ color: rgb(0, 209, 0);</string>
                <property name="styleSheet">
                 <string notr="true">QPushButton{
 font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid white;
+border: 0px solid white;
 border-radius: 10px;
 color: #ff0000;
 }</string>
                </property>
                <property name="text">
-                <string>+ add</string>
+                <string>+ ekle</string>
                </property>
               </widget>
              </item>
@@ -1198,10 +1203,10 @@ color: #ff0000;
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 75 14pt &quot;Bahnschrift&quot;;</string>
+                <string notr="true">font: 14pt &quot;Century Gothic&quot;;</string>
                </property>
                <property name="text">
-                <string>Notifications</string>
+                <string>Bildiri</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1215,8 +1220,8 @@ color: #ff0000;
            <widget class="QFrame" name="frame_11">
             <property name="styleSheet">
              <string notr="true">QFrame#frame_11{
-border: 1px solid #19A7CE;
-background-color: #19A7CE;
+border: 1px solid rgba(25, 167, 206,100);
+background-color: rgba(25, 167, 206,100);
 border-radius: 10px;
 }
 QLabel{
@@ -1236,8 +1241,6 @@ color: white;
               <widget class="QLabel" name="label_6">
                <property name="styleSheet">
                 <string notr="true">font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid #19A7CE;
-background-color: #19A7CE;
 color: white;
 border-radius: 10px;</string>
                </property>
@@ -1269,8 +1272,6 @@ border-radius: 10px;</string>
                <property name="styleSheet">
                 <string notr="true">QPushButton{
 font: 75 12pt &quot;Century Gothic&quot;;
-border: 1px solid #19A7CE;
-background-color: #19A7CE;
 color:white;
 border-radius: 10px;
 }
@@ -1279,7 +1280,7 @@ color:red;
 }</string>
                </property>
                <property name="text">
-                <string>Close</string>
+                <string>kapat</string>
                </property>
               </widget>
              </item>

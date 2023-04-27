@@ -14,9 +14,21 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1280, 720)
+        MainWindow.resize(1298, 720)
         MainWindow.setStyleSheet("QFrame#left_frame,#right_frame, #central_frame{\n"
-"background-color: white;\n"
+"    background-color: rgba(250, 226, 222,200);\n"
+"}\n"
+"QWidget#centralwidget{\n"
+"    image: url(:/resource/images/background.jpg);\n"
+"}\n"
+"QLineEdit{\n"
+"    background-color:rgb(248, 248, 253);\n"
+"font: 75 12pt \"Century Gothic\";\n"
+"border: 1px solid rgb(248, 248, 253);\n"
+"border-radius: 10px;\n"
+"}\n"
+"QComboBox{\n"
+"font: 75 12pt \"Century Gothic\";\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -27,6 +39,7 @@ class Ui_MainWindow(object):
         self.left_frame = QtWidgets.QFrame(self.centralwidget)
         self.left_frame.setMinimumSize(QtCore.QSize(200, 0))
         self.left_frame.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.left_frame.setStyleSheet("")
         self.left_frame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.left_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.left_frame.setObjectName("left_frame")
@@ -50,14 +63,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setSpacing(2)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.pushButton_2 = QtWidgets.QPushButton(self.frame_2)
-        self.pushButton_2.setMinimumSize(QtCore.QSize(0, 48))
-        self.pushButton_2.setMaximumSize(QtCore.QSize(16777215, 48))
-        self.pushButton_2.setToolTipDuration(-1)
-        self.pushButton_2.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.pushButton_2.setStyleSheet("QPushButton{\n"
+        self.home_btn = QtWidgets.QPushButton(self.frame_2)
+        self.home_btn.setMinimumSize(QtCore.QSize(0, 48))
+        self.home_btn.setMaximumSize(QtCore.QSize(16777215, 48))
+        self.home_btn.setToolTipDuration(-1)
+        self.home_btn.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.home_btn.setStyleSheet("QPushButton{\n"
 "font: 75 12pt \"Century Gothic\";\n"
-"border: 1px solid white;\n"
+"border: 0px solid white;\n"
 "border-radius: 10px;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -65,25 +78,25 @@ class Ui_MainWindow(object):
 "}")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/resource/images/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_2.setIcon(icon)
-        self.pushButton_2.setIconSize(QtCore.QSize(22, 22))
-        self.pushButton_2.setDefault(False)
-        self.pushButton_2.setFlat(False)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.verticalLayout_2.addWidget(self.pushButton_2)
-        self.pushButton_3 = QtWidgets.QPushButton(self.frame_2)
+        self.home_btn.setIcon(icon)
+        self.home_btn.setIconSize(QtCore.QSize(22, 22))
+        self.home_btn.setDefault(False)
+        self.home_btn.setFlat(False)
+        self.home_btn.setObjectName("home_btn")
+        self.verticalLayout_2.addWidget(self.home_btn)
+        self.patients_btn = QtWidgets.QPushButton(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_3.setSizePolicy(sizePolicy)
-        self.pushButton_3.setMinimumSize(QtCore.QSize(0, 48))
-        self.pushButton_3.setMaximumSize(QtCore.QSize(16777215, 48))
-        self.pushButton_3.setToolTipDuration(-1)
-        self.pushButton_3.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.pushButton_3.setStyleSheet("QPushButton{\n"
+        sizePolicy.setHeightForWidth(self.patients_btn.sizePolicy().hasHeightForWidth())
+        self.patients_btn.setSizePolicy(sizePolicy)
+        self.patients_btn.setMinimumSize(QtCore.QSize(0, 48))
+        self.patients_btn.setMaximumSize(QtCore.QSize(16777215, 48))
+        self.patients_btn.setToolTipDuration(-1)
+        self.patients_btn.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.patients_btn.setStyleSheet("QPushButton{\n"
 "font: 75 12pt \"Century Gothic\";\n"
-"border: 1px solid white;\n"
+"border: 0px solid white;\n"
 "border-radius: 10px;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -91,25 +104,25 @@ class Ui_MainWindow(object):
 "}")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/resource/images/user.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_3.setIcon(icon1)
-        self.pushButton_3.setIconSize(QtCore.QSize(22, 22))
-        self.pushButton_3.setDefault(False)
-        self.pushButton_3.setFlat(False)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.verticalLayout_2.addWidget(self.pushButton_3)
-        self.pushButton = QtWidgets.QPushButton(self.frame_2)
+        self.patients_btn.setIcon(icon1)
+        self.patients_btn.setIconSize(QtCore.QSize(22, 22))
+        self.patients_btn.setDefault(False)
+        self.patients_btn.setFlat(False)
+        self.patients_btn.setObjectName("patients_btn")
+        self.verticalLayout_2.addWidget(self.patients_btn)
+        self.history_btn = QtWidgets.QPushButton(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy)
-        self.pushButton.setMinimumSize(QtCore.QSize(0, 48))
-        self.pushButton.setMaximumSize(QtCore.QSize(16777215, 48))
-        self.pushButton.setToolTipDuration(-1)
-        self.pushButton.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.pushButton.setStyleSheet("QPushButton{\n"
+        sizePolicy.setHeightForWidth(self.history_btn.sizePolicy().hasHeightForWidth())
+        self.history_btn.setSizePolicy(sizePolicy)
+        self.history_btn.setMinimumSize(QtCore.QSize(0, 48))
+        self.history_btn.setMaximumSize(QtCore.QSize(16777215, 48))
+        self.history_btn.setToolTipDuration(-1)
+        self.history_btn.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.history_btn.setStyleSheet("QPushButton{\n"
 "font: 75 12pt \"Century Gothic\";\n"
-"border: 1px solid white;\n"
+"border: 0px solid white;\n"
 "border-radius: 10px;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -117,25 +130,25 @@ class Ui_MainWindow(object):
 "}")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/resource/images/history.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton.setIcon(icon2)
-        self.pushButton.setIconSize(QtCore.QSize(22, 22))
-        self.pushButton.setDefault(False)
-        self.pushButton.setFlat(False)
-        self.pushButton.setObjectName("pushButton")
-        self.verticalLayout_2.addWidget(self.pushButton)
-        self.pushButton_4 = QtWidgets.QPushButton(self.frame_2)
+        self.history_btn.setIcon(icon2)
+        self.history_btn.setIconSize(QtCore.QSize(22, 22))
+        self.history_btn.setDefault(False)
+        self.history_btn.setFlat(False)
+        self.history_btn.setObjectName("history_btn")
+        self.verticalLayout_2.addWidget(self.history_btn)
+        self.settings_btn = QtWidgets.QPushButton(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_4.sizePolicy().hasHeightForWidth())
-        self.pushButton_4.setSizePolicy(sizePolicy)
-        self.pushButton_4.setMinimumSize(QtCore.QSize(0, 48))
-        self.pushButton_4.setMaximumSize(QtCore.QSize(16777215, 48))
-        self.pushButton_4.setToolTipDuration(-1)
-        self.pushButton_4.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.pushButton_4.setStyleSheet("QPushButton{\n"
+        sizePolicy.setHeightForWidth(self.settings_btn.sizePolicy().hasHeightForWidth())
+        self.settings_btn.setSizePolicy(sizePolicy)
+        self.settings_btn.setMinimumSize(QtCore.QSize(0, 48))
+        self.settings_btn.setMaximumSize(QtCore.QSize(16777215, 48))
+        self.settings_btn.setToolTipDuration(-1)
+        self.settings_btn.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.settings_btn.setStyleSheet("QPushButton{\n"
 "font: 75 12pt \"Century Gothic\";\n"
-"border: 1px solid white;\n"
+"border: 0px solid white;\n"
 "border-radius: 10px;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -143,12 +156,12 @@ class Ui_MainWindow(object):
 "}")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(":/resource/images/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_4.setIcon(icon3)
-        self.pushButton_4.setIconSize(QtCore.QSize(22, 22))
-        self.pushButton_4.setDefault(False)
-        self.pushButton_4.setFlat(False)
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.verticalLayout_2.addWidget(self.pushButton_4)
+        self.settings_btn.setIcon(icon3)
+        self.settings_btn.setIconSize(QtCore.QSize(22, 22))
+        self.settings_btn.setDefault(False)
+        self.settings_btn.setFlat(False)
+        self.settings_btn.setObjectName("settings_btn")
+        self.verticalLayout_2.addWidget(self.settings_btn)
         self.frame_4 = QtWidgets.QFrame(self.frame_2)
         self.frame_4.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -204,13 +217,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.frame_14 = QtWidgets.QFrame(self.patients)
+        self.frame_14.setMinimumSize(QtCore.QSize(0, 0))
         self.frame_14.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_14.setObjectName("frame_14")
         self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.frame_14)
         self.verticalLayout_13.setObjectName("verticalLayout_13")
         self.label_7 = QtWidgets.QLabel(self.frame_14)
-        self.label_7.setStyleSheet("image: url(:/resource/images/register_doctor.png);")
+        self.label_7.setMinimumSize(QtCore.QSize(390, 0))
+        self.label_7.setStyleSheet("image: url(:/resource/images/rob.png);")
         self.label_7.setText("")
         self.label_7.setObjectName("label_7")
         self.verticalLayout_13.addWidget(self.label_7)
@@ -219,11 +234,131 @@ class Ui_MainWindow(object):
         self.frame_15.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_15.setObjectName("frame_15")
+        self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.frame_15)
+        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_14.setSpacing(0)
+        self.verticalLayout_14.setObjectName("verticalLayout_14")
         self.frame_16 = QtWidgets.QFrame(self.frame_15)
-        self.frame_16.setGeometry(QtCore.QRect(190, 200, 120, 80))
+        self.frame_16.setMinimumSize(QtCore.QSize(390, 0))
+        self.frame_16.setMaximumSize(QtCore.QSize(390, 16777215))
+        self.frame_16.setStyleSheet("QLabel{\n"
+"font: 75 11pt \"Century Gothic\";\n"
+"}")
         self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_16.setObjectName("frame_16")
+        self.verticalLayout_15 = QtWidgets.QVBoxLayout(self.frame_16)
+        self.verticalLayout_15.setObjectName("verticalLayout_15")
+        self.label_8 = QtWidgets.QLabel(self.frame_16)
+        self.label_8.setStyleSheet("font: 75 18pt \"Century Gothic\";")
+        self.label_8.setObjectName("label_8")
+        self.verticalLayout_15.addWidget(self.label_8)
+        self.label_9 = QtWidgets.QLabel(self.frame_16)
+        self.label_9.setStyleSheet("")
+        self.label_9.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
+        self.label_9.setObjectName("label_9")
+        self.verticalLayout_15.addWidget(self.label_9)
+        self.lineEdit = QtWidgets.QLineEdit(self.frame_16)
+        self.lineEdit.setMinimumSize(QtCore.QSize(0, 40))
+        self.lineEdit.setStyleSheet("")
+        self.lineEdit.setObjectName("lineEdit")
+        self.verticalLayout_15.addWidget(self.lineEdit)
+        self.label_10 = QtWidgets.QLabel(self.frame_16)
+        self.label_10.setStyleSheet("")
+        self.label_10.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
+        self.label_10.setObjectName("label_10")
+        self.verticalLayout_15.addWidget(self.label_10)
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.frame_16)
+        self.lineEdit_2.setMinimumSize(QtCore.QSize(0, 40))
+        self.lineEdit_2.setStyleSheet("")
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.verticalLayout_15.addWidget(self.lineEdit_2)
+        self.label_12 = QtWidgets.QLabel(self.frame_16)
+        self.label_12.setStyleSheet("")
+        self.label_12.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
+        self.label_12.setObjectName("label_12")
+        self.verticalLayout_15.addWidget(self.label_12)
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.frame_16)
+        self.lineEdit_3.setMinimumSize(QtCore.QSize(0, 40))
+        self.lineEdit_3.setStyleSheet("")
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.verticalLayout_15.addWidget(self.lineEdit_3)
+        self.label_11 = QtWidgets.QLabel(self.frame_16)
+        self.label_11.setStyleSheet("")
+        self.label_11.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
+        self.label_11.setObjectName("label_11")
+        self.verticalLayout_15.addWidget(self.label_11)
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.frame_16)
+        self.lineEdit_4.setMinimumSize(QtCore.QSize(0, 40))
+        self.lineEdit_4.setStyleSheet("")
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.verticalLayout_15.addWidget(self.lineEdit_4)
+        self.label_13 = QtWidgets.QLabel(self.frame_16)
+        self.label_13.setStyleSheet("")
+        self.label_13.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
+        self.label_13.setObjectName("label_13")
+        self.verticalLayout_15.addWidget(self.label_13)
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.frame_16)
+        self.lineEdit_5.setMinimumSize(QtCore.QSize(0, 40))
+        self.lineEdit_5.setStyleSheet("")
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.verticalLayout_15.addWidget(self.lineEdit_5)
+        self.label_14 = QtWidgets.QLabel(self.frame_16)
+        self.label_14.setStyleSheet("")
+        self.label_14.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
+        self.label_14.setObjectName("label_14")
+        self.verticalLayout_15.addWidget(self.label_14)
+        self.task_comb = QtWidgets.QComboBox(self.frame_16)
+        self.task_comb.setMinimumSize(QtCore.QSize(0, 40))
+        self.task_comb.setObjectName("task_comb")
+        self.verticalLayout_15.addWidget(self.task_comb)
+        self.label_15 = QtWidgets.QLabel(self.frame_16)
+        self.label_15.setStyleSheet("")
+        self.label_15.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
+        self.label_15.setObjectName("label_15")
+        self.verticalLayout_15.addWidget(self.label_15)
+        self.frame_17 = QtWidgets.QFrame(self.frame_16)
+        self.frame_17.setMinimumSize(QtCore.QSize(0, 40))
+        self.frame_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_17.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_17.setObjectName("frame_17")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_17)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setSpacing(20)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.morning = QtWidgets.QComboBox(self.frame_17)
+        self.morning.setMinimumSize(QtCore.QSize(0, 38))
+        self.morning.setObjectName("morning")
+        self.horizontalLayout_4.addWidget(self.morning)
+        self.after_noon = QtWidgets.QComboBox(self.frame_17)
+        self.after_noon.setMinimumSize(QtCore.QSize(0, 38))
+        self.after_noon.setObjectName("after_noon")
+        self.horizontalLayout_4.addWidget(self.after_noon)
+        self.evening = QtWidgets.QComboBox(self.frame_17)
+        self.evening.setMinimumSize(QtCore.QSize(0, 38))
+        self.evening.setObjectName("evening")
+        self.horizontalLayout_4.addWidget(self.evening)
+        self.verticalLayout_15.addWidget(self.frame_17)
+        self.label_16 = QtWidgets.QLabel(self.frame_16)
+        self.label_16.setText("")
+        self.label_16.setObjectName("label_16")
+        self.verticalLayout_15.addWidget(self.label_16)
+        self.pushButton_7 = QtWidgets.QPushButton(self.frame_16)
+        self.pushButton_7.setMinimumSize(QtCore.QSize(0, 40))
+        self.pushButton_7.setStyleSheet("QPushButton{\n"
+"    font: 12pt \"Century Gothic\";\n"
+"    color: white;\n"
+"    background-color: #f44336;\n"
+"border: 1px solid #f44336;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"border: 1px solid #ff5338;\n"
+"background-color: #ff5338;\n"
+"}")
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.verticalLayout_15.addWidget(self.pushButton_7)
+        self.verticalLayout_14.addWidget(self.frame_16, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         self.horizontalLayout_3.addWidget(self.frame_15)
         self.stackedWidget.addWidget(self.patients)
         self.verticalLayout_11.addWidget(self.stackedWidget)
@@ -305,7 +440,7 @@ class Ui_MainWindow(object):
         self.pushButton_5 = QtWidgets.QPushButton(self.frame_9)
         self.pushButton_5.setStyleSheet("QPushButton{\n"
 "font: 75 12pt \"Century Gothic\";\n"
-"border: 1px solid white;\n"
+"border: 0px solid white;\n"
 "border-radius: 10px;\n"
 "color: #ff0000;\n"
 "}")
@@ -338,15 +473,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.label_5 = QtWidgets.QLabel(self.frame_10)
         self.label_5.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.label_5.setStyleSheet("font: 75 14pt \"Bahnschrift\";")
+        self.label_5.setStyleSheet("font: 14pt \"Century Gothic\";")
         self.label_5.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_5.setObjectName("label_5")
         self.verticalLayout_9.addWidget(self.label_5)
         self.verticalLayout_8.addWidget(self.frame_10)
         self.frame_11 = QtWidgets.QFrame(self.frame_7)
         self.frame_11.setStyleSheet("QFrame#frame_11{\n"
-"border: 1px solid #19A7CE;\n"
-"background-color: #19A7CE;\n"
+"border: 1px solid rgba(25, 167, 206,100);\n"
+"background-color: rgba(25, 167, 206,100);\n"
 "border-radius: 10px;\n"
 "}\n"
 "QLabel{\n"
@@ -361,8 +496,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.label_6 = QtWidgets.QLabel(self.frame_11)
         self.label_6.setStyleSheet("font: 75 12pt \"Century Gothic\";\n"
-"border: 1px solid #19A7CE;\n"
-"background-color: #19A7CE;\n"
 "color: white;\n"
 "border-radius: 10px;")
         self.label_6.setText("")
@@ -375,8 +508,6 @@ class Ui_MainWindow(object):
         self.pushButton_6.setMaximumSize(QtCore.QSize(80, 16777215))
         self.pushButton_6.setStyleSheet("QPushButton{\n"
 "font: 75 12pt \"Century Gothic\";\n"
-"border: 1px solid #19A7CE;\n"
-"background-color: #19A7CE;\n"
 "color:white;\n"
 "border-radius: 10px;\n"
 "}\n"
@@ -397,16 +528,25 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton_2.setText(_translate("MainWindow", "  Ana Sayfa   "))
-        self.pushButton_3.setText(_translate("MainWindow", "  Patients        "))
-        self.pushButton.setText(_translate("MainWindow", "  History           "))
-        self.pushButton_4.setText(_translate("MainWindow", "  Settings        "))
+        self.home_btn.setText(_translate("MainWindow", "  Ana Sayfa   "))
+        self.patients_btn.setText(_translate("MainWindow", "  Patients        "))
+        self.history_btn.setText(_translate("MainWindow", "  History           "))
+        self.settings_btn.setText(_translate("MainWindow", "  Settings        "))
+        self.label_8.setText(_translate("MainWindow", "Hasta ekle"))
+        self.label_9.setText(_translate("MainWindow", "Ad-Soyad"))
+        self.label_10.setText(_translate("MainWindow", "Tel"))
+        self.label_12.setText(_translate("MainWindow", "Yaş"))
+        self.label_11.setText(_translate("MainWindow", "Oda No"))
+        self.label_13.setText(_translate("MainWindow", "İlaç"))
+        self.label_14.setText(_translate("MainWindow", "Görev"))
+        self.label_15.setText(_translate("MainWindow", "Takvim"))
+        self.pushButton_7.setText(_translate("MainWindow", "Ekle"))
         self.label_2.setText(_translate("MainWindow", "NCT-ROB-01"))
         self.label_3.setText(_translate("MainWindow", "Active"))
-        self.label_4.setText(_translate("MainWindow", "Next events"))
-        self.pushButton_5.setText(_translate("MainWindow", "+ add"))
-        self.label_5.setText(_translate("MainWindow", "Notifications"))
-        self.pushButton_6.setText(_translate("MainWindow", "Close"))
+        self.label_4.setText(_translate("MainWindow", "Bir sonraki"))
+        self.pushButton_5.setText(_translate("MainWindow", "+ ekle"))
+        self.label_5.setText(_translate("MainWindow", "Bildiri"))
+        self.pushButton_6.setText(_translate("MainWindow", "kapat"))
 import resource_rc
 
 
