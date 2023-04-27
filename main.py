@@ -54,7 +54,7 @@ class ui_windows(QMainWindow):
         self.ui.video_layout.addWidget(videowidget)
         self.mediaplayer.setVideoOutput(videowidget)
         self.playlist = QMediaPlaylist()
-        self.playlist.addMedia(QMediaContent(QUrl.fromLocalFile('images/robot_video.mp4')))
+        self.playlist.addMedia(QMediaContent(QUrl.fromLocalFile('images/rob.mp4')))
         self.playlist.setPlaybackMode(QMediaPlaylist.CurrentItemInLoop)
         self.mediaplayer.setPlaylist(self.playlist)
         self.mediaplayer.setMuted(True)
