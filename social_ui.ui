@@ -101,7 +101,7 @@ font: 75 12pt &quot;Century Gothic&quot;;
           <string notr="true">image: url(:/resource/images/logo.png);</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
@@ -117,7 +117,7 @@ font: 75 12pt &quot;Century Gothic&quot;;
           </size>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
@@ -390,7 +390,7 @@ background-color: #f2e8e4;
        <item>
         <widget class="QFrame" name="frame_3">
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
@@ -592,7 +592,7 @@ font: 75 11pt &quot;Century Gothic&quot;;
 }</string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::NoFrame</enum>
                 </property>
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
@@ -971,7 +971,7 @@ image: url(:/resource/images/doctor.png);
           <item alignment="Qt::AlignBottom">
            <widget class="QFrame" name="frame_8">
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
