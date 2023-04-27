@@ -529,9 +529,9 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.home_btn.setText(_translate("MainWindow", "  Ana Sayfa   "))
-        self.patients_btn.setText(_translate("MainWindow", "  Patients        "))
-        self.history_btn.setText(_translate("MainWindow", "  History           "))
-        self.settings_btn.setText(_translate("MainWindow", "  Settings        "))
+        self.patients_btn.setText(_translate("MainWindow", "  Hastalar       "))
+        self.history_btn.setText(_translate("MainWindow", "  Geçmişlar    "))
+        self.settings_btn.setText(_translate("MainWindow", "  Ayarlar        "))
         self.label_8.setText(_translate("MainWindow", "Hasta ekle"))
         self.label_9.setText(_translate("MainWindow", "Ad-Soyad"))
         self.label_10.setText(_translate("MainWindow", "Tel"))

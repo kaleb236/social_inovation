@@ -226,7 +226,7 @@ background-color: #f2e8e4;
 }</string>
             </property>
             <property name="text">
-             <string>  Patients        </string>
+             <string>  Hastalar       </string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
@@ -283,7 +283,7 @@ background-color: #f2e8e4;
 }</string>
             </property>
             <property name="text">
-             <string>  History           </string>
+             <string>  Geçmişlar    </string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
@@ -340,7 +340,7 @@ background-color: #f2e8e4;
 }</string>
             </property>
             <property name="text">
-             <string>  Settings        </string>
+             <string>  Ayarlar        </string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
